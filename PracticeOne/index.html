@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="sh">Hello! - Show/Hide</h1>
+    <h1 class="toggle">Toggle Me! - Toggle</h1>
+    <button class="hide">Hide Me!</button>
+    <button class="show">Show Me!</button>
+    <button class="toggleb">Toggle Me!</button>
+
+    <h1 class="s">Sliding!</h1>
+    <button class="slide">Sliding!</button>
+    
+    <h1 class="f">Fading!</h1>
+    <button class="fade">Fading!</button>
+    
+
+    <script>
+        $(document).ready(function() {
+            $('.hide').click(function() {
+                $('.sh').hide();
+            })
+            $('.show').click(function() {
+                $('.sh').show();
+            })
+            $('.toggleb').click(function() {
+                $('.toggle').toggle();
+            })
+            function run() {
+                $('.slide').click(function() {
+                    $('.s').slideUp(1000);
+                    $('.s').slideDown(1000);
+                })
+            }
+            function fade() {
+                $('.fade').click(function() {
+                    $('.f').fadeOut(1000);
+                    $('.f').fadeIn(1000);
+                })
+            }
+            run();
+            fade();
+        });
+    </script>
+
+
+</body>
+</html>
